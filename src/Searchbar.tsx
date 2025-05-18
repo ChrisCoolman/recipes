@@ -9,8 +9,13 @@ function Searchbar({onSearch} : {onSearch: (searchTerm: string) => void}) {
         onSearch(e.target.value);
     };
 
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault(); // Prevents page reload
+        onSearch(input);
+    };
+
     return(
-        <form className="bg-dark-green text-white text-center p-2 m-8 rounded-4xl flex items-center justify-begin w-2xl">
+        <form onSubmit={handleSubmit} className="bg-dark-green text-white text-center p-2 m-8 rounded-4xl flex items-center justify-begin w-2xl">
             <div className="pl-4">
                 <FaMagnifyingGlass />
             </div>
