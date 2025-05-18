@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --color-white: #EBF5DF;
+    --color-green: #BAD4AA;
+    --color-dark-green: #9CC185;
+    --color-vanilla: #D4D4AA;
+    --color-yellow: #EDB458;
+    --color-orange: #E8871E;
+}
+
+@layer components {
+    .background {
+        background-color: var(--color-green);
+        width: 100%;
+        height: 100%;
+    }
+    .searchbar {
+        outline: none;
+        font-size: 1.5rem;
+    }
+}
